@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BuySooner Customer Roadmap — Page 1 Preview</title>
+  <style>
+    :root {
+      --bs-navy: #071f3a;
+      --bs-teal: #09847c;
+      --bs-soft: #f4f7f8;
+      --bs-card: #ffffff;
+      --bs-text: #425363;
+      --bs-muted: #6e7b86;
+      --bs-border: rgba(7, 31, 58, 0.10);
+      --bs-shadow: 0 24px 70px rgba(7, 31, 58, 0.10);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #eef3f4;
+      color: var(--bs-text);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .roadmap-preview-shell {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 32px;
+    }
+
+    .roadmap-page {
+      position: relative;
+      min-height: 1080px;
+      overflow: hidden;
+      border-radius: 34px;
+      border: 1px solid var(--bs-border);
+      background:
+        radial-gradient(circle at 88% 11%, rgba(9, 132, 124, 0.12), transparent 28%),
+        linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.95) 56%, rgba(228,247,246,0.58) 100%);
+      box-shadow: var(--bs-shadow);
+      padding: 54px;
+    }
+
+    .roadmap-page::before {
+      content: "";
+      position: absolute;
+      top: 36px;
+      left: 54px;
+      width: 108px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--bs-teal);
+    }
+
+    .brand-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 28px;
+      margin-top: 30px;
+      margin-bottom: 28px;
+    }
+
+    .bs-logo {
+      display: block;
+      max-width: 290px;
+      width: 42vw;
+      height: auto;
+    }
+
+    .logo-fallback {
+      display: none;
+      color: var(--bs-navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 58px;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -0.045em;
+    }
+
+    .meta-card {
+      min-width: 300px;
+      max-width: 390px;
+      border-radius: 24px;
+      border: 1px solid var(--bs-border);
+      background: rgba(255,255,255,0.72);
+      padding: 18px 20px;
+      backdrop-filter: blur(8px);
+    }
+
+    .meta-row {
+      display: grid;
+      grid-template-columns: 118px minmax(0, 1fr);
+      gap: 12px;
+      padding: 9px 0;
+      border-bottom: 1px solid rgba(7,31,58,0.07);
+    }
+
+    .meta-row:last-child { border-bottom: 0; }
+
+    .meta-row span {
+      color: var(--bs-muted);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    .meta-row strong {
+      color: var(--bs-navy);
+      font-size: 14px;
+      font-weight: 900;
+      text-align: right;
+    }
+
+    .hero h1 {
+      margin: 0;
+      max-width: 760px;
+      color: var(--bs-navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(46px, 5.5vw, 78px);
+      line-height: 0.98;
+      letter-spacing: -0.045em;
+    }
+
+    .hero-subline {
+      margin: 18px 0 0;
+      color: var(--bs-teal);
+      font-size: clamp(19px, 2.1vw, 26px);
+      font-weight: 900;
+      line-height: 1.22;
+    }
+
+    .intro-card {
+      margin-top: 30px;
+      max-width: 890px;
+      border-radius: 28px;
+      border: 1px solid rgba(7,31,58,0.08);
+      background: rgba(255,255,255,0.74);
+      padding: 26px 28px;
+    }
+
+    .intro-card p {
+      margin: 0 0 14px;
+      color: var(--bs-text);
+      font-size: 16px;
+      line-height: 1.52;
+    }
+
+    .intro-card p:last-child { margin-bottom: 0; }
+
+    .intro-card strong { color: var(--bs-navy); }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(350px, 0.92fr);
+      gap: 22px;
+      margin-top: 26px;
+      align-items: stretch;
+    }
+
+    .section-card {
+      border-radius: 28px;
+      border: 1px solid var(--bs-border);
+      background: var(--bs-card);
+      box-shadow: 0 14px 38px rgba(7,31,58,0.06);
+      padding: 26px;
+    }
+
+    .section-kicker {
+      margin: 0 0 8px;
+      color: var(--bs-teal);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.055em;
+      text-transform: uppercase;
+    }
+
+    .section-card h2 {
+      margin: 0 0 6px;
+      color: var(--bs-navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(27px, 3vw, 39px);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+
+    .section-card .section-subtitle {
+      margin: 0 0 18px;
+      color: var(--bs-muted);
+      font-size: 15px;
+      line-height: 1.45;
+    }
+
+    .snapshot-table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 18px;
+    }
+
+    .snapshot-table tr {
+      border-bottom: 1px solid rgba(7,31,58,0.07);
+    }
+
+    .snapshot-table tr:last-child { border-bottom: 0; }
+
+    .snapshot-table td {
+      padding: 11px 0;
+      vertical-align: middle;
+      color: var(--bs-text);
+      font-size: 15px;
+    }
+
+    .snapshot-table td:last-child {
+      text-align: right;
+      color: var(--bs-navy);
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .result-box {
+      margin-top: 20px;
+      border-radius: 22px;
+      background: var(--bs-navy);
+      color: #fff;
+      padding: 22px;
+    }
+
+    .result-box p {
+      margin: 0;
+      color: rgba(255,255,255,0.86);
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .result-box strong { color: #fff; }
+
+    .highlight-number {
+      display: block;
+      margin-top: 13px;
+      color: #fff;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 34px;
+      line-height: 1;
+      letter-spacing: -0.035em;
+    }
+
+    .assumption-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .assumption-item {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: center;
+      border-radius: 17px;
+      background: var(--bs-soft);
+      padding: 14px 16px;
+    }
+
+    .assumption-item span {
+      color: var(--bs-muted);
+      font-size: 14px;
+      line-height: 1.25;
+    }
+
+    .assumption-item strong {
+      color: var(--bs-navy);
+      font-size: 15px;
+      font-weight: 900;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .commitment-box {
+      margin-top: 18px;
+      border-radius: 22px;
+      background: rgba(9,132,124,0.09);
+      border: 1px solid rgba(9,132,124,0.18);
+      padding: 18px;
+    }
+
+    .commitment-box p {
+      margin: 0;
+      color: #24545a;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .why-box {
+      margin-top: 22px;
+      border-radius: 26px;
+      border: 1px solid rgba(9,132,124,0.18);
+      background: linear-gradient(135deg, rgba(9,132,124,0.10), rgba(255,255,255,0.76));
+      padding: 24px 26px;
+    }
+
+    .why-box h3 {
+      margin: 0 0 9px;
+      color: var(--bs-navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 28px;
+      line-height: 1.08;
+      letter-spacing: -0.025em;
+    }
+
+    .why-box p {
+      margin: 0;
+      color: var(--bs-text);
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .why-box strong { color: var(--bs-navy); }
+
+    .footer-note {
+      margin-top: 24px;
+      border-top: 1px solid rgba(7,31,58,0.09);
+      padding-top: 17px;
+      color: var(--bs-muted);
+      font-size: 12.5px;
+      line-height: 1.45;
+    }
+
+    .footer-note p {
+      margin: 0 0 8px;
+    }
+
+    .footer-note p:last-child { margin-bottom: 0; }
+
+    @media (max-width: 920px) {
+      .roadmap-preview-shell { padding: 18px; }
+      .roadmap-page { min-height: 0; padding: 34px 22px; }
+      .roadmap-page::before { top: 22px; left: 22px; }
+      .brand-row, .section-grid { grid-template-columns: 1fr; display: grid; }
+      .meta-card { max-width: none; min-width: 0; }
+      .meta-row strong { text-align: left; }
+      .meta-row { grid-template-columns: 1fr; gap: 3px; }
+      .intro-card { padding: 22px; }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .roadmap-preview-shell { padding: 0; max-width: none; }
+      .roadmap-page {
+        min-height: 100vh;
+        box-shadow: none;
+        border: 0;
+        border-radius: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="roadmap-preview-shell">
+    <section class="roadmap-page" id="pageOneRoadmap">
+      <div class="brand-row">
+        <div>
+          <img class="bs-logo" id="buySoonerLogo" src="assets/buysooner-logo.png" alt="BuySooner" />
+          <div class="logo-fallback" id="logoFallback">BuySooner</div>
+        </div>
+
+        <aside class="meta-card" aria-label="Roadmap details">
+          <div class="meta-row"><span>Prepared for</span><strong id="preparedFor">Sarah</strong></div>
+          <div class="meta-row"><span>Strategy</span><strong id="propertyStrategy">St Leonards Entry</strong></div>
+          <div class="meta-row" id="brokerMetaRow"><span>Prepared with</span><strong id="preparedWith">Michael Chen, ABC Mortgage Brokers</strong></div>
+          <div class="meta-row"><span>Date</span><strong id="preparedDate">13 May 2026</strong></div>
+        </aside>
+      </div>
+
+      <header class="hero">
+        <h1>Your Personalised Path to Ownership</h1>
+        <p class="hero-subline">Bridge the deposit gap. Get into the market earlier. Own from day one.</p>
+      </header>
+
+      <section class="intro-card">
+        <p><strong>Hi <span id="firstNameIntro">Sarah</span>,</strong></p>
+        <p>Thank you for sharing your goals with BuySooner.</p>
+        <p>We know that in a market like <strong id="introAreaA">St Leonards</strong>, timing is everything. This Roadmap has been designed to show you exactly how we can help you bridge the deposit gap, bypass the <strong>“Waiting Tax”</strong>, and secure your home today rather than years from now.</p>
+        <p>At BuySooner, we believe in <strong>Total Transparency</strong>. This is not just a financial arrangement; it is a partnership. On the following pages, we have broken down the numbers, the growth projections, and the exit strategy in plain English so you can make an informed decision about your future.</p>
+        <p>Based on what you have shared, your main barrier appears to be closing the deposit gap — not necessarily finding the right property or wanting to buy.</p>
+        <p id="buyerTypeLine">You are currently renting and looking to buy. That means every month spent waiting may mean more rent paid while the deposit target keeps moving.</p>
+      </section>
+
+      <div class="section-grid">
+        <section class="section-card">
+          <p class="section-kicker">1. Your Property Snapshot</p>
+          <h2>Strategic overview of your current buying power.</h2>
+          <p class="section-subtitle">Detailing the scenario used for this personalised Roadmap.</p>
+
+          <table class="snapshot-table" aria-label="Property snapshot">
+            <tbody>
+              <tr><td>Target purchase price</td><td id="targetPurchasePrice">$1,000,000</td></tr>
+              <tr><td>Target area</td><td id="targetArea">St Leonards</td></tr>
+              <tr><td>Your cash contribution</td><td id="cashContribution">$100,000</td></tr>
+              <tr><td>Estimated bank loan</td><td id="estimatedBankLoan">$800,000</td></tr>
+              <tr><td>The BuySooner “Boost”</td><td id="buySoonerBoost">$100,000</td></tr>
+              <tr><td>Estimated deposit gap bridged</td><td id="depositGapBridged">$100,000</td></tr>
+              <tr><td>Total deposit position</td><td id="totalDepositPosition">$200,000</td></tr>
+              <tr><td>Starting deposit position</td><td id="startingDepositPosition">20.0%</td></tr>
+            </tbody>
+          </table>
+
+          <div class="result-box">
+            <p><strong>The Result:</strong> By partnering with BuySooner, you are entering the market with a full <strong id="resultDepositPercent">20% deposit</strong> — <strong id="resultDepositAmount">$200,000 total</strong> — significantly increasing your buying power and eliminating the need for Lenders Mortgage Insurance (LMI).</p>
+            <span class="highlight-number">Estimated LMI avoided: <span id="estimatedLmiAvoided">$11,800</span>*</span>
+          </div>
+        </section>
+
+        <section class="section-card">
+          <p class="section-kicker">2. The Strategy & Assumptions</p>
+          <h2>The Roadmap to full independence.</h2>
+          <p class="section-subtitle">To help you visualise your progress, we have modelled your journey based on the following conservative benchmarks.</p>
+
+          <div class="assumption-list">
+            <div class="assumption-item"><span>Projected market growth</span><strong id="projectedGrowth">5.0% p.a.</strong></div>
+            <div class="assumption-item"><span>Target refinance window</span><strong>Year 3 to Year 5</strong></div>
+            <div class="assumption-item"><span>The BuySooner Commitment</span><strong>$0 monthly repayments</strong></div>
+            <div class="assumption-item"><span>Indicative refinance target</span><strong>Around 80% LVR or lower</strong></div>
+            <div class="assumption-item" id="currentRentRow"><span>Current rent</span><strong id="currentRent">$3,500 per month</strong></div>
+          </div>
+
+          <div class="commitment-box">
+            <p><strong>The BuySooner Commitment:</strong> While you own the home, 100% of your monthly cash flow remains focused on paying down your primary mortgage.</p>
+          </div>
+
+          <div class="why-box">
+            <h3>Why this matters</h3>
+            <p>In a market growing at <strong id="whyGrowth">5.0% p.a.</strong>, waiting just one more year to save that extra <strong id="whyGapAmount">$100,000</strong> could see the price of a <strong id="whyArea">St Leonards</strong> property rise by approximately <strong id="oneYearGrowthCost">$50,000</strong>.</p>
+            <p style="margin-top: 10px;"><strong>BuySooner lets you capture that growth instead of paying for it later.</strong></p>
+          </div>
+        </section>
+      </div>
+
+      <footer class="footer-note">
+        <p>This Roadmap is an indicative illustration designed to provide a conceptual overview of the BuySooner model. It does not constitute a formal loan approval, property valuation, or financial, legal or tax advice. All figures are estimates based on the data provided during your application.</p>
+        <p>*Estimated LMI avoided is a rough calculation only and is not a lender quote. Actual LMI may be higher, lower, unavailable or treated differently depending on lender policy, mortgage insurer assessment, borrower profile, property type, loan structure and approval conditions.</p>
+      </footer>
+    </section>
+  </main>
+
+  <script>
+    // Preview data. Replace this object with values from the existing prototype scenario/preApply object.
+    const roadmapPreviewData = {
+      customerName: 'Sarah',
+      targetArea: 'St Leonards',
+      propertyStrategy: 'St Leonards Entry',
+      brokerName: 'Michael Chen',
+      brokerFirm: 'ABC Mortgage Brokers',
+      preparedDate: '13 May 2026',
+      buyerType: 'renter', // renter | upgrader
+      targetPurchasePrice: 1000000,
+      customerContribution: 100000,
+      buySoonerBoost: 100000,
+      projectedMarketGrowth: 0.05,
+      currentRentMonthly: 3500
+    };
+
+    function money(value) {
+      return new Intl.NumberFormat('en-AU', {
+        style: 'currency',
+        currency: 'AUD',
+        maximumFractionDigits: 0
+      }).format(Number(value || 0));
+    }
+
+    function percent(value, digits = 1) {
+      return `${(Number(value || 0) * 100).toFixed(digits)}%`;
+    }
+
+    function lmiRateForLvr(lvr) {
+      if (lvr <= 0.80) return 0;
+      if (lvr <= 0.85) return 0.008;
+      if (lvr <= 0.90) return 0.022;
+      if (lvr <= 0.95) return 0.046;
+      return null;
+    }
+
+    function estimateLmi(propertyValue, depositAmount) {
+      const loan = Math.max(0, propertyValue - depositAmount);
+      const lvr = propertyValue > 0 ? loan / propertyValue : 0;
+      const rate = lmiRateForLvr(lvr);
+      if (rate === null) return null;
+      return Math.round(loan * rate);
+    }
+
+    function renderRoadmapPageOne(data) {
+      const firstName = (data.customerName || 'Customer').split(' ')[0];
+      const targetPrice = Number(data.targetPurchasePrice || 0);
+      const customerContribution = Number(data.customerContribution || 0);
+      const boost = Number(data.buySoonerBoost || 0);
+      const totalDeposit = customerContribution + boost;
+      const estimatedBankLoan = Math.max(0, targetPrice - totalDeposit);
+      const depositPercent = targetPrice > 0 ? totalDeposit / targetPrice : 0;
+      const oneYearGrowthCost = Math.round(targetPrice * Number(data.projectedMarketGrowth || 0.05));
+
+      const lmiBefore = estimateLmi(targetPrice, customerContribution) || 0;
+      const lmiAfter = estimateLmi(targetPrice, totalDeposit) || 0;
+      const lmiAvoided = Math.max(0, lmiBefore - lmiAfter);
+
+      document.getElementById('preparedFor').textContent = data.customerName || 'Customer';
+      document.getElementById('propertyStrategy').textContent = data.propertyStrategy || `${data.targetArea || 'Target area'} Entry`;
+      document.getElementById('preparedDate').textContent = data.preparedDate || new Intl.DateTimeFormat('en-AU', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date());
+
+      if (data.brokerName || data.brokerFirm) {
+        document.getElementById('preparedWith').textContent = [data.brokerName, data.brokerFirm].filter(Boolean).join(', ');
+      } else {
+        document.getElementById('brokerMetaRow').style.display = 'none';
+      }
+
+      document.getElementById('firstNameIntro').textContent = firstName;
+      document.getElementById('introAreaA').textContent = data.targetArea || 'your target area';
+
+      const buyerLine = document.getElementById('buyerTypeLine');
+      if (data.buyerType === 'upgrader') {
+        buyerLine.textContent = 'You are looking to upgrade. That means the key question is whether BuySooner can help you move into the next property sooner while keeping a clear refinance pathway.';
+      } else {
+        buyerLine.textContent = 'You are currently renting and looking to buy. That means every month spent waiting may mean more rent paid while the deposit target keeps moving.';
+      }
+
+      document.getElementById('targetPurchasePrice').textContent = money(targetPrice);
+      document.getElementById('targetArea').textContent = data.targetArea || 'Target area';
+      document.getElementById('cashContribution').textContent = money(customerContribution);
+      document.getElementById('estimatedBankLoan').textContent = money(estimatedBankLoan);
+      document.getElementById('buySoonerBoost').textContent = money(boost);
+      document.getElementById('depositGapBridged').textContent = money(boost);
+      document.getElementById('totalDepositPosition').textContent = money(totalDeposit);
+      document.getElementById('startingDepositPosition').textContent = percent(depositPercent);
+      document.getElementById('resultDepositPercent').textContent = `${percent(depositPercent, 0)} deposit`;
+      document.getElementById('resultDepositAmount').textContent = `${money(totalDeposit)} total`;
+      document.getElementById('estimatedLmiAvoided').textContent = money(lmiAvoided);
+
+      document.getElementById('projectedGrowth').textContent = `${percent(data.projectedMarketGrowth || 0.05)} p.a.`;
+      document.getElementById('whyGrowth').textContent = `${percent(data.projectedMarketGrowth || 0.05)} p.a.`;
+      document.getElementById('whyGapAmount').textContent = money(boost);
+      document.getElementById('whyArea').textContent = data.targetArea || 'your target area';
+      document.getElementById('oneYearGrowthCost').textContent = money(oneYearGrowthCost);
+
+      if (data.currentRentMonthly) {
+        document.getElementById('currentRent').textContent = `${money(data.currentRentMonthly)} per month`;
+      } else {
+        document.getElementById('currentRentRow').style.display = 'none';
+      }
+    }
+
+    const logo = document.getElementById('buySoonerLogo');
+    logo.onerror = function () {
+      logo.style.display = 'none';
+      document.getElementById('logoFallback').style.display = 'block';
+    };
+
+    renderRoadmapPageOne(roadmapPreviewData);
+  </script>
+</body>
+</html>

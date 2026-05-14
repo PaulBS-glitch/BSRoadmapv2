@@ -1,0 +1,617 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BuySooner Customer Roadmap — Page 10 Preview</title>
+  <style>
+    :root {
+      --navy: #061c3d;
+      --teal: #087c75;
+      --teal-dark: #056a63;
+      --teal-soft: #e8f7f4;
+      --gold: #d8a51e;
+      --gold-soft: #fff8e6;
+      --green-soft: #edf9f2;
+      --blue-soft: #edf5ff;
+      --ink: #17243a;
+      --muted: #5f6e7e;
+      --line: rgba(6, 28, 61, 0.14);
+      --shadow: 0 22px 68px rgba(6, 28, 61, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #eef4f5;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .preview-shell {
+      width: 100%;
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 28px;
+    }
+
+    .roadmap-page {
+      width: 100%;
+      max-width: 1180px;
+      min-height: 1120px;
+      position: relative;
+      overflow: hidden;
+      margin: 0 auto;
+      border-radius: 32px;
+      border: 1px solid rgba(6, 28, 61, .10);
+      background:
+        radial-gradient(circle at 84% 6%, rgba(9, 132, 124, .12), transparent 30%),
+        linear-gradient(135deg, #fff 0%, #fff 68%, #eef9f8 100%);
+      box-shadow: var(--shadow);
+      padding: 40px 42px 36px;
+    }
+
+    .brand-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 24px;
+      margin-bottom: 30px;
+    }
+
+    .brand-wordmark {
+      color: var(--navy);
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 40px;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -.04em;
+    }
+
+    .brand-tagline {
+      margin-top: 9px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .page-label {
+      min-width: 280px;
+      text-align: right;
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .02em;
+    }
+
+    .page-progress {
+      width: 230px;
+      height: 6px;
+      border-radius: 999px;
+      margin-top: 10px;
+      margin-left: auto;
+      background: rgba(6,28,61,.08);
+      overflow: hidden;
+    }
+
+    .page-progress span {
+      display: block;
+      width: 90%;
+      height: 100%;
+      border-radius: 999px;
+      background: var(--teal);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 345px;
+      gap: 34px;
+      align-items: stretch;
+      margin-bottom: 28px;
+    }
+
+    .hero-copy h1 {
+      margin: 0;
+      max-width: 800px;
+      color: var(--navy);
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(54px, 5.8vw, 82px);
+      line-height: .94;
+      letter-spacing: -.055em;
+    }
+
+    .hero-copy h1 span { color: var(--teal); }
+
+    .hero-copy h2 {
+      margin: 18px 0 0;
+      color: var(--teal);
+      font-size: clamp(28px, 3vw, 38px);
+      line-height: 1.08;
+      letter-spacing: -.025em;
+      font-weight: 900;
+    }
+
+    .hero-copy p {
+      max-width: 760px;
+      margin: 22px 0 0;
+      color: var(--navy);
+      font-size: 20px;
+      line-height: 1.42;
+    }
+
+    .hero-copy strong { color: var(--navy); font-weight: 900; }
+
+    .hero-visual {
+      min-height: 300px;
+      position: relative;
+      border-radius: 32px;
+      border: 1px solid rgba(6,28,61,.10);
+      background:
+        radial-gradient(circle at 50% 38%, rgba(255,255,255,.95) 0 10%, transparent 11%),
+        linear-gradient(135deg, rgba(8,124,117,.16), rgba(6,28,61,.10)),
+        url('assets/customer-keys-home.jpg');
+      background-size: auto, cover, cover;
+      background-position: center;
+      box-shadow: 0 18px 46px rgba(6,28,61,.14);
+      overflow: hidden;
+    }
+
+    .hero-badge {
+      position: absolute;
+      left: 20px;
+      right: 20px;
+      bottom: 20px;
+      border-radius: 22px;
+      background: rgba(6,28,61,.93);
+      color: #fff;
+      padding: 18px 20px;
+      font-size: 20px;
+      line-height: 1.22;
+      font-weight: 900;
+      box-shadow: 0 18px 42px rgba(6,28,61,.22);
+    }
+
+    .drivers-wrap {
+      margin-bottom: 28px;
+    }
+
+    .section-title {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 18px;
+      margin: 0 0 12px;
+      color: var(--navy);
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 36px;
+      line-height: 1;
+      letter-spacing: -.03em;
+      text-align: center;
+    }
+
+    .section-title::before,
+    .section-title::after {
+      content: '';
+      height: 2px;
+      background: rgba(8,124,117,.55);
+    }
+
+    .drivers-intro {
+      max-width: 720px;
+      margin: 0 auto 18px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 16px;
+      line-height: 1.42;
+      font-weight: 800;
+    }
+
+    .drivers-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .driver-card {
+      min-height: 178px;
+      display: grid;
+      grid-template-columns: 70px minmax(0, 1fr);
+      gap: 16px;
+      align-items: center;
+      border-radius: 26px;
+      border: 1px solid rgba(6,28,61,.10);
+      background: #fff;
+      box-shadow: 0 12px 30px rgba(6,28,61,.05);
+      padding: 22px;
+    }
+
+    .driver-icon {
+      width: 64px;
+      height: 64px;
+      display: grid;
+      place-items: center;
+      border-radius: 20px;
+      color: var(--teal);
+      background: var(--teal-soft);
+      font-size: 34px;
+      font-weight: 900;
+    }
+
+    .driver-card h3 {
+      margin: 0 0 7px;
+      color: var(--navy);
+      font-size: 23px;
+      line-height: 1.05;
+      font-weight: 900;
+    }
+
+    .driver-card p {
+      margin: 0;
+      color: var(--navy);
+      font-size: 16px;
+      line-height: 1.34;
+    }
+
+    .scenarios-panel {
+      margin-bottom: 26px;
+      border-radius: 30px;
+      border: 1px solid rgba(6,28,61,.10);
+      background: #fff;
+      box-shadow: 0 16px 42px rgba(6,28,61,.07);
+      padding: 26px;
+    }
+
+    .scenario-title {
+      margin: 0 0 18px;
+      color: var(--navy);
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 34px;
+      line-height: 1;
+      letter-spacing: -.03em;
+      text-align: center;
+    }
+
+    .scenario-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .scenario-card {
+      min-height: 300px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 26px;
+      border: 1px solid rgba(6,28,61,.12);
+      background: linear-gradient(180deg, #fff 0%, #fbfdfe 100%);
+      padding: 24px;
+      box-shadow: 0 12px 30px rgba(6,28,61,.045);
+    }
+
+    .scenario-card::before {
+      content: '';
+      position: absolute;
+      inset: 0 0 auto;
+      height: 8px;
+      background: var(--teal);
+    }
+
+    .scenario-card.cautious::before { background: #6d7e8b; }
+    .scenario-card.base::before { background: var(--teal); }
+    .scenario-card.strong::before { background: var(--gold); }
+
+    .scenario-card h3 {
+      margin: 4px 0 12px;
+      color: var(--navy);
+      font-size: 26px;
+      line-height: 1.05;
+      font-weight: 900;
+    }
+
+    .growth-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      border-radius: 999px;
+      padding: 0 16px;
+      background: var(--teal-soft);
+      color: var(--teal-dark);
+      font-size: 18px;
+      font-weight: 900;
+      margin-bottom: 18px;
+    }
+
+    .cautious .growth-badge {
+      background: #eef2f4;
+      color: #536471;
+    }
+
+    .strong .growth-badge {
+      background: var(--gold-soft);
+      color: #a87800;
+    }
+
+    .likely-box {
+      border-radius: 22px;
+      background: var(--navy);
+      color: #fff;
+      padding: 18px;
+      margin: 0 0 18px;
+    }
+
+    .likely-box span {
+      display: block;
+      color: rgba(255,255,255,.78);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      margin-bottom: 7px;
+    }
+
+    .likely-box strong {
+      color: #fff;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 42px;
+      line-height: .95;
+      letter-spacing: -.04em;
+    }
+
+    .scenario-card p {
+      margin: 0;
+      color: var(--navy);
+      font-size: 16px;
+      line-height: 1.39;
+    }
+
+    .scenario-note {
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(6,28,61,.10);
+      color: var(--muted) !important;
+      font-size: 12.5px !important;
+      font-weight: 800;
+    }
+
+    .bottom-panel {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 290px;
+      gap: 26px;
+      align-items: center;
+      border-radius: 30px;
+      background: var(--navy);
+      color: #fff;
+      padding: 28px 32px;
+      box-shadow: 0 18px 42px rgba(6,28,61,.22);
+      margin-bottom: 18px;
+    }
+
+    .bottom-panel h2 {
+      margin: 0 0 8px;
+      color: #fff;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 38px;
+      line-height: 1.05;
+      letter-spacing: -.035em;
+    }
+
+    .bottom-panel p {
+      margin: 0;
+      color: rgba(255,255,255,.86);
+      font-size: 19px;
+      line-height: 1.42;
+    }
+
+    .bottom-panel strong { color: #fff; }
+
+    .independence-stamp {
+      display: grid;
+      place-items: center;
+      min-height: 150px;
+      border-radius: 26px;
+      border: 2px solid rgba(255,255,255,.30);
+      background: rgba(255,255,255,.08);
+      text-align: center;
+      padding: 22px;
+    }
+
+    .independence-stamp span {
+      display: block;
+      color: #63d4ca;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+
+    .independence-stamp strong {
+      display: block;
+      color: #fff;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 32px;
+      line-height: 1.02;
+      letter-spacing: -.035em;
+    }
+
+    .dark-strip {
+      border-radius: 24px;
+      background: #111827;
+      color: #fff;
+      text-align: center;
+      padding: 20px 24px;
+      font-size: 30px;
+      line-height: 1.12;
+      font-weight: 900;
+      letter-spacing: -.02em;
+    }
+
+    .dark-strip span { color: #63d4ca; }
+
+    .footer-note {
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 11.5px;
+      line-height: 1.4;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      border-top: 1px solid rgba(6,28,61,.08);
+      padding-top: 13px;
+    }
+
+    @media (max-width: 1020px) {
+      .preview-shell { padding: 18px; }
+      .roadmap-page { padding: 30px 22px; min-height: 0; }
+      .brand-row, .hero, .drivers-grid, .scenario-grid, .bottom-panel { grid-template-columns: 1fr; }
+      .page-label { min-width: 0; text-align: left; }
+      .page-progress { width: 100%; margin-left: 0; }
+      .footer-note { flex-direction: column; }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .preview-shell { padding: 0; max-width: none; }
+      .roadmap-page { min-height: 100vh; border: 0; border-radius: 0; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="preview-shell">
+    <section class="roadmap-page">
+      <header class="brand-row">
+        <div>
+          <div class="brand-wordmark">BuySooner</div>
+          <div class="brand-tagline">Buy sooner. Buy smarter.</div>
+        </div>
+        <div class="page-label">
+          Page 10 — Path to Full Independence
+          <div class="page-progress"><span></span></div>
+        </div>
+      </header>
+
+      <section class="hero">
+        <div class="hero-copy">
+          <h1>Your Path to <span>Full Independence</span></h1>
+          <h2>Moving from the “Bridge” to 100% Ownership.</h2>
+          <p>BuySooner is designed to be your head start, not a forever arrangement. Our goal is to see you transition into a standard bank mortgage as soon as the numbers align. When that happens, BuySooner steps out, and you move forward with <strong>100% of the future growth</strong> in your <strong id="heroArea">St Leonards</strong> home.</p>
+        </div>
+        <aside class="hero-visual" aria-label="Full independence visual">
+          <div class="hero-badge">The exit is not about guessing a date. It is about the strength of your position.</div>
+        </aside>
+      </section>
+
+      <section class="drivers-wrap">
+        <h2 class="section-title">What Drives Your Timeline?</h2>
+        <p class="drivers-intro">The timing of your refinance generally depends on three factors.</p>
+
+        <div class="drivers-grid">
+          <article class="driver-card">
+            <div class="driver-icon">↗</div>
+            <div>
+              <h3>Property Growth</h3>
+              <p>As your home in <span id="driverArea">St Leonards</span> increases in value, your equity grows.</p>
+            </div>
+          </article>
+
+          <article class="driver-card">
+            <div class="driver-icon">$</div>
+            <div>
+              <h3>Mortgage Progress</h3>
+              <p>Every repayment you make reduces your balance and strengthens your position.</p>
+            </div>
+          </article>
+
+          <article class="driver-card">
+            <div class="driver-icon">☑</div>
+            <div>
+              <h3>The Review</h3>
+              <p>Starting from Year 3, we’ll look at the numbers together to see if the bridge has done its job.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="scenarios-panel">
+        <h2 class="scenario-title">Three Scenarios for Your Exit</h2>
+
+        <div class="scenario-grid">
+          <article class="scenario-card cautious">
+            <h3>The Cautious Market</h3>
+            <div class="growth-badge">4.0% p.a. growth</div>
+            <div class="likely-box">
+              <span>Likely refinance</span>
+              <strong>Year 5</strong>
+            </div>
+            <p>If the market takes a steadier breath, we simply stay on the bridge a little longer to help ensure your refinance position is secure.</p>
+            <p class="scenario-note">A slower market may need more time before BuySooner can step out.</p>
+          </article>
+
+          <article class="scenario-card base">
+            <h3>The Roadmap Base Case</h3>
+            <div class="growth-badge">5.0% p.a. growth</div>
+            <div class="likely-box">
+              <span>Likely refinance</span>
+              <strong>Year 4</strong>
+            </div>
+            <p>Year 3 will be close, but Year 4 likely provides the cleanest pathway to transition to a standard bank loan.</p>
+            <p class="scenario-note">This is the central Roadmap case used for the personalised illustration.</p>
+          </article>
+
+          <article class="scenario-card strong">
+            <h3>The Stronger Market</h3>
+            <div class="growth-badge">7.0% p.a. growth</div>
+            <div class="likely-box">
+              <span>Likely refinance</span>
+              <strong>Year 3</strong>
+            </div>
+            <p>A stronger market accelerates your equity, potentially allowing BuySooner to step out as early as Year 3.</p>
+            <p class="scenario-note">Faster growth may bring the refinance pathway forward.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="bottom-panel">
+        <div>
+          <h2>The Bottom Line</h2>
+          <p>The faster your equity grows and the more you pay down your mortgage, the sooner you reach full independence. We are here to help you monitor the market so you can make the move at the right time for you.</p>
+        </div>
+        <div class="independence-stamp">
+          <span>From partnership to</span>
+          <strong>100% Independence</strong>
+        </div>
+      </section>
+
+      <div class="dark-strip">From partnership to <span>100% independence.</span> That is the goal.</div>
+
+      <footer class="footer-note">
+        <span><strong>Indicative pathway only.</strong> Behind the scenes, the Roadmap tests estimated property value, mortgage balance, BuySooner payout and refinance readiness.</span>
+        <span>Final refinance depends on lender approval, valuation, income, debts, expenses and credit assessment.</span>
+      </footer>
+    </section>
+  </main>
+
+  <script>
+    const pageTenData = {
+      customerName: 'Sarah',
+      targetArea: 'St Leonards',
+      cautiousGrowth: 0.04,
+      baseGrowth: 0.05,
+      strongGrowth: 0.07,
+      cautiousLikelyYear: 5,
+      baseLikelyYear: 4,
+      strongLikelyYear: 3
+    };
+
+    function renderPageTen(data) {
+      const area = data.targetArea || 'your target area';
+      document.getElementById('heroArea').textContent = area;
+      document.getElementById('driverArea').textContent = area;
+    }
+
+    renderPageTen(pageTenData);
+  </script>
+</body>
+</html>

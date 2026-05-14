@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BuySooner Customer Roadmap — Page 13 Help & Contact Preview</title>
+  <style>
+    :root {
+      --navy: #061c3d;
+      --teal: #087c75;
+      --teal-dark: #056a63;
+      --teal-soft: #e8f7f4;
+      --gold: #d8a51e;
+      --gold-soft: #fff8e6;
+      --blue-soft: #eef5ff;
+      --ink: #17243a;
+      --muted: #5f6e7e;
+      --line: rgba(6, 28, 61, 0.12);
+      --shadow: 0 22px 68px rgba(6, 28, 61, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #eef4f5;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .preview-shell {
+      width: 100%;
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 28px;
+    }
+
+    .roadmap-page {
+      width: 100%;
+      max-width: 1180px;
+      min-height: 1120px;
+      position: relative;
+      overflow: hidden;
+      margin: 0 auto;
+      border-radius: 32px;
+      border: 1px solid rgba(6, 28, 61, .10);
+      background:
+        radial-gradient(circle at 84% 6%, rgba(9, 132, 124, .12), transparent 30%),
+        linear-gradient(135deg, #fff 0%, #fff 70%, #eef9f8 100%);
+      box-shadow: var(--shadow);
+      padding: 40px 42px 36px;
+    }
+
+    .brand-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 24px;
+      margin-bottom: 28px;
+    }
+
+    .brand-wordmark {
+      color: var(--navy);
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 40px;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -.04em;
+    }
+
+    .brand-tagline {
+      margin-top: 9px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .page-label {
+      min-width: 280px;
+      text-align: right;
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .02em;
+    }
+
+    .page-progress {
+      width: 230px;
+      height: 6px;
+      border-radius: 999px;
+      margin-top: 10px;
+      margin-left: auto;
+      background: rgba(6,28,61,.08);
+      overflow: hidden;
+    }
+
+    .page-progress span {
+      display: block;
+      width: 96%;
+      height: 100%;
+      border-radius: 999px;
+      background: var(--teal);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 360px;
+      gap: 34px;
+      align-items: stretch;
+      margin-bottom: 28px;
+    }
+
+    .hero-copy h1 {
+      margin: 0;
+      color: var(--navy);
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(54px, 5.8vw, 82px);
+      line-height: .94;
+      letter-spacing: -.055em;
+    }
+
+    .hero-copy h1 span { color: var(--teal); }
+
+    .accent {
+      width: 118px;
+      height: 5px;
+      margin: 18px 0 20px;
+      border-radius: 999px;
+      background: var(--gold);
+    }
+
+    .hero-copy h2 {
+      margin: 0 0 16px;
+      color: var(--teal-dark);
+      font-size: 28px;
+      line-height: 1.12;
+      font-weight: 900;
+      letter-spacing: -.015em;
+    }
+
+    .hero-copy p {
+      max-width: 750px;
+      margin: 0;
+      color: var(--navy);
+      font-size: 18px;
+      line-height: 1.48;
+      font-weight: 600;
+    }
+
+    .hero-card {
+      border-radius: 30px;
+      border: 1px solid rgba(6,28,61,.10);
+      background: linear-gradient(135deg, var(--teal-soft), #fff);
+      box-shadow: 0 18px 46px rgba(6,28,61,.10);
+      padding: 26px;
+      display: grid;
+      align-content: center;
+      gap: 16px;
+    }
+
+    .hero-card-icon {
+      width: 78px;
+      height: 78px;
+      display: grid;
+      place-items: center;
+      border-radius: 24px;
+      background: var(--teal);
+      color: #fff;
+      font-size: 42px;
+      font-weight: 900;
+    }
+
+    .hero-card h3 {
+      margin: 0;
+      color: var(--navy);
+      font-size: 27px;
+      line-height: 1.05;
+      font-weight: 900;
+    }
+
+    .hero-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.38;
+      font-weight: 800;
+    }
+
+    .support-grid {
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      gap: 22px;
+      margin-bottom: 24px;
+    }
+
+    .support-card {
+      border-radius: 30px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.92);
+      box-shadow: 0 16px 42px rgba(6,28,61,.07);
+      overflow: hidden;
+    }
+
+    .support-head {
+      display: grid;
+      grid-template-columns: 62px minmax(0, 1fr);
+      gap: 16px;
+      align-items: center;
+      padding: 20px 24px;
+      background: linear-gradient(135deg, #f5fbfa, #fff);
+      border-bottom: 1px solid rgba(6,28,61,.08);
+    }
+
+    .support-icon {
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      border-radius: 18px;
+      background: var(--teal);
+      color: #fff;
+      font-size: 30px;
+      font-weight: 900;
+    }
+
+    .broker .support-icon { background: var(--navy); }
+
+    .support-head h2 {
+      margin: 0 0 4px;
+      color: var(--navy);
+      font-size: 28px;
+      line-height: 1.05;
+      font-weight: 900;
+    }
+
+    .support-head p {
+      margin: 0;
+      color: var(--teal-dark);
+      font-size: 14px;
+      line-height: 1.3;
+      font-weight: 900;
+    }
+
+    .support-body {
+      padding: 22px 24px 24px;
+    }
+
+    .options-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .option-card {
+      min-height: 108px;
+      border-radius: 20px;
+      border: 1px solid rgba(6,28,61,.09);
+      background: #fff;
+      padding: 16px;
+      display: grid;
+      grid-template-columns: 40px minmax(0, 1fr);
+      gap: 12px;
+      align-items: start;
+    }
+
+    .option-icon {
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: var(--teal-soft);
+      color: var(--teal);
+      font-size: 20px;
+      font-weight: 900;
+    }
+
+    .option-card h3 {
+      margin: 0 0 4px;
+      color: var(--navy);
+      font-size: 15px;
+      line-height: 1.15;
+      font-weight: 900;
+    }
+
+    .option-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12.2px;
+      line-height: 1.32;
+      font-weight: 700;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .contact-row {
+      display: grid;
+      grid-template-columns: 112px minmax(0, 1fr);
+      gap: 12px;
+      border-radius: 16px;
+      background: #f8fbfb;
+      border: 1px solid rgba(6,28,61,.06);
+      padding: 11px 13px;
+      align-items: center;
+    }
+
+    .contact-row span {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+
+    .contact-row strong {
+      color: var(--navy);
+      font-size: 14px;
+      line-height: 1.22;
+      font-weight: 900;
+    }
+
+    .who-panel {
+      border-radius: 30px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.90);
+      box-shadow: 0 16px 42px rgba(6,28,61,.06);
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+
+    .who-panel h2 {
+      margin: 0 0 16px;
+      color: var(--navy);
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 34px;
+      line-height: 1;
+      letter-spacing: -.03em;
+      text-align: center;
+    }
+
+    .who-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .who-card {
+      border-radius: 18px;
+      background: var(--teal-soft);
+      padding: 16px;
+      min-height: 94px;
+    }
+
+    .who-card.broker { background: var(--blue-soft); }
+    .who-card.both { background: var(--gold-soft); }
+
+    .who-card span {
+      display: block;
+      color: var(--teal-dark);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      margin-bottom: 7px;
+    }
+
+    .who-card.broker span { color: var(--navy); }
+    .who-card.both span { color: #9b7100; }
+
+    .who-card p {
+      margin: 0;
+      color: var(--navy);
+      font-size: 14px;
+      line-height: 1.34;
+      font-weight: 800;
+    }
+
+    .trust-bar {
+      display: grid;
+      grid-template-columns: 62px minmax(0, 1fr);
+      gap: 14px;
+      align-items: center;
+      border-radius: 22px;
+      background: linear-gradient(90deg, var(--teal-dark), var(--teal));
+      color: #fff;
+      padding: 18px 22px;
+      margin-bottom: 18px;
+    }
+
+    .trust-icon {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 15px;
+      border: 2px solid rgba(255,255,255,.38);
+      color: #fff;
+      font-size: 29px;
+      font-weight: 900;
+    }
+
+    .trust-bar p {
+      margin: 0;
+      color: #fff;
+      font-size: 26px;
+      line-height: 1.15;
+      font-weight: 900;
+    }
+
+    .trust-bar span {
+      opacity: .9;
+      font-weight: 500;
+    }
+
+    .simple-version {
+      margin-bottom: 18px;
+    }
+
+    .simple-version h2 {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 18px;
+      margin: 0 0 16px;
+      color: var(--navy);
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 34px;
+      line-height: 1;
+      letter-spacing: -.03em;
+      text-align: center;
+    }
+
+    .simple-version h2::before,
+    .simple-version h2::after {
+      content: '';
+      height: 2px;
+      background: rgba(8,124,117,.55);
+    }
+
+    .simple-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      align-items: stretch;
+    }
+
+    .simple-step {
+      position: relative;
+      min-height: 170px;
+      display: grid;
+      align-content: center;
+      justify-items: center;
+      text-align: center;
+      border-radius: 22px;
+      border: 1px solid rgba(6,28,61,.10);
+      background: rgba(255,255,255,.90);
+      padding: 18px 12px;
+      box-shadow: 0 12px 28px rgba(6,28,61,.045);
+    }
+
+    .simple-step:not(:last-child)::after {
+      content: '→';
+      position: absolute;
+      top: 50%;
+      right: -16px;
+      transform: translateY(-50%);
+      color: var(--teal);
+      font-size: 22px;
+      font-weight: 900;
+      z-index: 2;
+    }
+
+    .simple-icon {
+      width: 56px;
+      height: 56px;
+      display: grid;
+      place-items: center;
+      border-radius: 18px;
+      background: var(--teal-soft);
+      color: var(--teal);
+      font-size: 30px;
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+
+    .simple-step p {
+      margin: 0;
+      color: var(--navy);
+      font-size: 16px;
+      line-height: 1.24;
+      font-weight: 800;
+    }
+
+    .bottom-strip {
+      border-radius: 24px;
+      background: var(--navy);
+      color: #fff;
+      padding: 20px 24px;
+      text-align: center;
+    }
+
+    .bottom-strip p {
+      margin: 0;
+      color: #fff;
+      font-size: 22px;
+      line-height: 1.25;
+      font-weight: 900;
+    }
+
+    .bottom-strip span { color: #68d3c7; }
+
+    .footer-note {
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 11.5px;
+      line-height: 1.4;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      border-top: 1px solid rgba(6,28,61,.08);
+      padding-top: 13px;
+    }
+
+    @media (max-width: 1020px) {
+      .preview-shell { padding: 18px; }
+      .roadmap-page { padding: 30px 22px; min-height: 0; }
+      .brand-row, .hero, .support-grid, .who-grid, .simple-grid { grid-template-columns: 1fr; }
+      .page-label { min-width: 0; text-align: left; }
+      .page-progress { width: 100%; margin-left: 0; }
+      .options-grid { grid-template-columns: 1fr; }
+      .simple-step:not(:last-child)::after { display: none; }
+      .footer-note { flex-direction: column; }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .preview-shell { padding: 0; max-width: none; }
+      .roadmap-page { min-height: 100vh; border: 0; border-radius: 0; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="preview-shell">
+    <section class="roadmap-page">
+      <header class="brand-row">
+        <div>
+          <div class="brand-wordmark">BuySooner</div>
+          <div class="brand-tagline">Buy sooner. Buy smarter.</div>
+        </div>
+        <div class="page-label">
+          Page 13 — Help & Contact
+          <div class="page-progress"><span></span></div>
+        </div>
+      </header>
+
+      <section class="hero">
+        <div class="hero-copy">
+          <h1>We’re here to <span>help.</span></h1>
+          <div class="accent"></div>
+          <h2>You do not need to work this out alone.</h2>
+          <p><strong id="customerNameA">Sarah</strong>, your Roadmap is designed to make the pathway clear. If you want to talk through the numbers, the BuySooner bridge, the lending pathway or what happens next, support is available from both BuySooner and <strong id="brokerNameA">Alex</strong>.</p>
+        </div>
+        <aside class="hero-card">
+          <div class="hero-card-icon">?</div>
+          <h3>Start with the question you have.</h3>
+          <p>BuySooner can explain the bridge. Your broker can review the lending pathway.</p>
+        </aside>
+      </section>
+
+      <section class="support-grid">
+        <article class="support-card buysooner">
+          <div class="support-head">
+            <div class="support-icon">◇</div>
+            <div>
+              <h2>Speak with BuySooner</h2>
+              <p>Our specialists are ready to help with your Roadmap and BuySooner questions.</p>
+            </div>
+          </div>
+          <div class="support-body">
+            <div class="options-grid">
+              <div class="option-card"><div class="option-icon">💬</div><div><h3>Click to chat</h3><p>Quick Roadmap or product questions.</p></div></div>
+              <div class="option-card"><div class="option-icon">▣</div><div><h3>Book a Roadmap review</h3><p>Walk through your scenario in detail.</p></div></div>
+              <div class="option-card"><div class="option-icon">☎</div><div><h3>Request a callback</h3><p>Ask a specialist to contact you.</p></div></div>
+              <div class="option-card"><div class="option-icon">✉</div><div><h3>Email BuySooner</h3><p>Written questions or document-heavy queries.</p></div></div>
+            </div>
+
+            <div class="contact-list">
+              <div class="contact-row"><span>Website</span><strong>buysooner.com/contact-us</strong></div>
+              <div class="contact-row"><span>Phone</span><strong>1300 000 000</strong></div>
+              <div class="contact-row"><span>Email</span><strong>hello@buysooner.com</strong></div>
+              <div class="contact-row"><span>Address</span><strong>Level 1, 100 Example Street, Sydney NSW 2000</strong></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="support-card broker">
+          <div class="support-head">
+            <div class="support-icon">A</div>
+            <div>
+              <h2>Speak with Alex</h2>
+              <p>Your broker can help with the lending pathway.</p>
+            </div>
+          </div>
+          <div class="support-body">
+            <div class="contact-list">
+              <div class="contact-row"><span>Broker</span><strong id="brokerNameB">Alex B Broker</strong></div>
+              <div class="contact-row"><span>Firm</span><strong>AB Broker and Associated</strong></div>
+              <div class="contact-row"><span>Phone</span><strong>0400 000 000</strong></div>
+              <div class="contact-row"><span>Email</span><strong>alex@abbrokerassociated.com.au</strong></div>
+              <div class="contact-row"><span>Address</span><strong>24 Broker Street, Brokervale NSW 2022</strong></div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="who-panel">
+        <h2>Who should I contact?</h2>
+        <div class="who-grid">
+          <div class="who-card"><span>BuySooner</span><p>How BuySooner works, what your Roadmap means, and what happens after you apply.</p></div>
+          <div class="who-card broker"><span>Alex</span><p>Borrowing capacity, lender options, documents needed, serviceability and valuation questions.</p></div>
+          <div class="who-card both"><span>BuySooner + Alex</span><p>Refinance readiness, Year 3 to Year 5 pathway, and how the bridge steps out.</p></div>
+        </div>
+      </section>
+
+      <section class="trust-bar">
+        <div class="trust-icon">✓</div>
+        <p>Why customers trust us <span>| Australian-based. Licensed. Structured. Governed.</span></p>
+      </section>
+
+      <section class="simple-version">
+        <h2>The Simple Version</h2>
+        <div class="simple-grid">
+          <article class="simple-step"><div class="simple-icon">⌂</div><p>You own the home.</p></article>
+          <article class="simple-step"><div class="simple-icon">▥</div><p>Your bank loan stays normal.</p></article>
+          <article class="simple-step"><div class="simple-icon">$</div><p>You make no monthly payments to BuySooner.</p></article>
+          <article class="simple-step"><div class="simple-icon">⇄</div><p>BuySooner is repaid at exit.</p></article>
+          <article class="simple-step"><div class="simple-icon">↗</div><p>You keep building your future.</p></article>
+        </div>
+      </section>
+
+      <section class="bottom-strip">
+        <p>BuySooner helps explain the bridge. <span>Alex helps review the lending pathway.</span> Together, we help you understand the next step before you move forward.</p>
+      </section>
+
+      <footer class="footer-note">
+        <span><strong>Contact page summary only.</strong> Final eligibility, approval and transaction terms remain subject to assessment and documentation.</span>
+        <span>This Roadmap is indicative and is not financial, legal or tax advice.</span>
+      </footer>
+    </section>
+  </main>
+
+  <script>
+    const pageThirteenData = {
+      customerName: 'Sarah',
+      brokerName: 'Alex B Broker'
+    };
+
+    function renderPageThirteen(data) {
+      const firstName = (data.customerName || 'Customer').split(' ')[0];
+      const broker = data.brokerName || 'your broker';
+      document.getElementById('customerNameA').textContent = firstName;
+      document.getElementById('brokerNameA').textContent = broker.split(' ')[0] || broker;
+      document.getElementById('brokerNameB').textContent = broker;
+    }
+
+    renderPageThirteen(pageThirteenData);
+  </script>
+</body>
+</html>

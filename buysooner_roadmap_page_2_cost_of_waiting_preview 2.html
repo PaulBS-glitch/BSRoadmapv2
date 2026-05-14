@@ -1,0 +1,721 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BuySooner Customer Roadmap — Page 2 Preview</title>
+  <style>
+    :root {
+      --bs-navy: #071f3a;
+      --bs-teal: #09847c;
+      --bs-teal-soft: #e7f6f4;
+      --bs-bg: #eef4f5;
+      --bs-card: #ffffff;
+      --bs-soft: #f5f7f8;
+      --bs-soft-2: #f8fbfb;
+      --bs-text: #425363;
+      --bs-muted: #6e7b86;
+      --bs-red: #a74545;
+      --bs-border: rgba(7, 31, 58, 0.10);
+      --bs-shadow: 0 24px 70px rgba(7, 31, 58, 0.10);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bs-bg);
+      color: var(--bs-text);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .preview-shell {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 32px;
+    }
+
+    .report-page {
+      position: relative;
+      min-height: 1120px;
+      overflow: hidden;
+      border-radius: 34px;
+      border: 1px solid var(--bs-border);
+      background:
+        radial-gradient(circle at 92% 10%, rgba(9, 132, 124, 0.11), transparent 30%),
+        linear-gradient(135deg, #ffffff 0%, #ffffff 62%, #edf9f8 100%);
+      box-shadow: var(--bs-shadow);
+      padding: 52px 54px 42px;
+    }
+
+    .report-page::before {
+      content: "";
+      position: absolute;
+      top: 34px;
+      left: 54px;
+      width: 108px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--bs-teal);
+    }
+
+    .brand-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 24px;
+      margin-top: 26px;
+      margin-bottom: 28px;
+    }
+
+    .brand-wordmark {
+      color: var(--bs-navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 40px;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      line-height: 1;
+    }
+
+    .brand-tagline {
+      margin-top: 9px;
+      color: var(--bs-muted);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .page-label {
+      min-width: 250px;
+      text-align: right;
+      color: var(--bs-navy);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.02em;
+    }
+
+    .page-progress {
+      width: 210px;
+      height: 6px;
+      border-radius: 999px;
+      margin-top: 10px;
+      background: rgba(7,31,58,0.08);
+      overflow: hidden;
+    }
+
+    .page-progress span {
+      display: block;
+      width: 32%;
+      height: 100%;
+      border-radius: 999px;
+      background: var(--bs-teal);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 300px;
+      gap: 34px;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .hero h1 {
+      margin: 0;
+      color: var(--bs-navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(46px, 5.3vw, 72px);
+      line-height: 0.98;
+      letter-spacing: -0.045em;
+    }
+
+    .hero-subtitle {
+      margin: 18px 0 0;
+      max-width: 760px;
+      color: var(--bs-navy);
+      font-size: 21px;
+      font-weight: 900;
+      line-height: 1.24;
+    }
+
+    .hero-personal {
+      margin: 14px 0 0;
+      max-width: 760px;
+      color: var(--bs-text);
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .hero-image-card {
+      height: 176px;
+      border-radius: 26px;
+      overflow: hidden;
+      background:
+        linear-gradient(135deg, rgba(7,31,58,0.07), rgba(9,132,124,0.16)),
+        url('assets/waiting-clock.jpg');
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 18px 46px rgba(7,31,58,0.14);
+      border: 1px solid rgba(7,31,58,0.08);
+      position: relative;
+    }
+
+    .hero-image-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(7,31,58,0.12));
+    }
+
+    .facts-section {
+      border-radius: 28px;
+      border: 1px solid var(--bs-border);
+      background: rgba(255,255,255,0.78);
+      box-shadow: 0 14px 38px rgba(7,31,58,0.06);
+      padding: 24px 24px 18px;
+      margin-bottom: 28px;
+    }
+
+    .facts-section h2 {
+      margin: 0 0 18px;
+      color: var(--bs-navy);
+      text-align: center;
+      font-size: 26px;
+      line-height: 1.1;
+    }
+
+    .fact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .fact-card {
+      min-height: 170px;
+      display: grid;
+      align-content: center;
+      justify-items: center;
+      text-align: center;
+      border-radius: 22px;
+      border: 1px solid rgba(7,31,58,0.10);
+      background: linear-gradient(180deg, #fff 0%, #f7fbfb 100%);
+      padding: 20px;
+    }
+
+    .fact-icon {
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border-radius: 16px;
+      background: var(--bs-teal-soft);
+      color: var(--bs-teal);
+      font-size: 20px;
+      margin-bottom: 14px;
+    }
+
+    .fact-card h3 {
+      margin: 0 0 6px;
+      color: var(--bs-navy);
+      font-size: 16px;
+      line-height: 1.15;
+    }
+
+    .fact-number {
+      color: var(--bs-teal);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 44px;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -0.045em;
+    }
+
+    .fact-card p {
+      margin: 7px 0 0;
+      color: var(--bs-muted);
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.25;
+    }
+
+    .sources {
+      margin: 14px 0 0;
+      color: #a2adb7;
+      text-align: center;
+      font-size: 10.5px;
+      line-height: 1.3;
+    }
+
+    .scenario-card {
+      border-radius: 30px;
+      border: 1px solid var(--bs-border);
+      background: #fff;
+      box-shadow: 0 14px 38px rgba(7,31,58,0.06);
+      padding: 28px;
+    }
+
+    .scenario-top {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 270px;
+      gap: 20px;
+      align-items: stretch;
+      margin-bottom: 26px;
+    }
+
+    .scenario-copy h2 {
+      margin: 0 0 8px;
+      color: var(--bs-navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 38px;
+      line-height: 1.04;
+      letter-spacing: -0.035em;
+    }
+
+    .scenario-copy p {
+      margin: 0;
+      color: var(--bs-text);
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .scenario-assumptions {
+      display: grid;
+      gap: 10px;
+    }
+
+    .assumption-pill {
+      border-radius: 18px;
+      background: var(--bs-soft);
+      border: 1px solid rgba(7,31,58,0.07);
+      padding: 12px 14px;
+    }
+
+    .assumption-pill span {
+      display: block;
+      color: var(--bs-muted);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .assumption-pill strong {
+      display: block;
+      margin-top: 3px;
+      color: var(--bs-navy);
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .today-tomorrow {
+      max-width: 560px;
+      margin: 0 auto 22px;
+      text-align: center;
+    }
+
+    .today-tomorrow h3 {
+      margin: 0 0 4px;
+      color: var(--bs-navy);
+      font-size: 18px;
+      line-height: 1.15;
+    }
+
+    .today-tomorrow .area {
+      margin: 0 0 12px;
+      color: var(--bs-teal);
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .value-bridge {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 56px minmax(0, 1fr);
+      align-items: center;
+      gap: 12px;
+      border-radius: 24px;
+      border: 1px solid rgba(9,132,124,0.18);
+      background: linear-gradient(135deg, #ffffff 0%, #effafa 100%);
+      padding: 18px;
+    }
+
+    .value-box {
+      border-radius: 18px;
+      background: #fff;
+      padding: 18px;
+      text-align: left;
+    }
+
+    .value-box span {
+      display: block;
+      color: var(--bs-muted);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .value-box strong {
+      display: block;
+      margin-top: 6px;
+      color: var(--bs-navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 32px;
+      letter-spacing: -0.035em;
+    }
+
+    .arrow {
+      color: var(--bs-teal);
+      font-size: 30px;
+      font-weight: 900;
+      text-align: center;
+    }
+
+    .move-line {
+      margin: 12px 0 0;
+      color: var(--bs-muted);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .waiting-tax {
+      text-align: center;
+      margin: 24px 0 20px;
+    }
+
+    .waiting-tax h2 {
+      margin: 0 0 8px;
+      color: var(--bs-navy);
+      font-size: 26px;
+    }
+
+    .waiting-tax strong {
+      display: block;
+      color: #282d33;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(66px, 9vw, 112px);
+      line-height: 0.9;
+      letter-spacing: -0.065em;
+    }
+
+    .waiting-tax p {
+      max-width: 720px;
+      margin: 14px auto 0;
+      color: var(--bs-text);
+      font-size: 15px;
+      font-weight: 800;
+      line-height: 1.45;
+    }
+
+    .rent-drain {
+      max-width: 520px;
+      margin: 0 auto 24px;
+      text-align: center;
+      border-radius: 24px;
+      background: var(--bs-soft-2);
+      border: 1px solid rgba(7,31,58,0.08);
+      padding: 18px;
+    }
+
+    .rent-drain h3 {
+      margin: 0 0 5px;
+      color: var(--bs-navy);
+      font-size: 22px;
+    }
+
+    .rent-drain p {
+      margin: 0;
+      color: var(--bs-text);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .rent-drain strong {
+      display: inline-block;
+      margin-top: 10px;
+      color: var(--bs-teal);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 35px;
+      line-height: 1;
+      letter-spacing: -0.035em;
+    }
+
+    .choice-card {
+      border-radius: 28px;
+      border: 1px solid var(--bs-border);
+      background: #fff;
+      padding: 24px;
+    }
+
+    .choice-card h2 {
+      margin: 0 0 18px;
+      text-align: center;
+      color: var(--bs-navy);
+      font-size: 28px;
+      line-height: 1.1;
+    }
+
+    .choice-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .choice-option {
+      min-height: 172px;
+      border-radius: 24px;
+      padding: 22px;
+      border: 2px solid rgba(7,31,58,0.08);
+    }
+
+    .choice-option.wait {
+      border-color: rgba(167,69,69,0.28);
+      background: #fffafa;
+    }
+
+    .choice-option.buy {
+      border-color: rgba(9,132,124,0.25);
+      background: #f1fbfa;
+    }
+
+    .choice-option span {
+      color: var(--bs-red);
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    .choice-option.buy span { color: var(--bs-teal); }
+
+    .choice-option h3 {
+      margin: 8px 0 8px;
+      color: var(--bs-navy);
+      font-size: 25px;
+      line-height: 1.08;
+    }
+
+    .choice-option p {
+      margin: 0;
+      color: var(--bs-text);
+      font-size: 14px;
+      font-weight: 800;
+      line-height: 1.45;
+    }
+
+    .bottom-line {
+      margin: 18px 0 0;
+      text-align: center;
+      color: var(--bs-navy);
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .footer-note {
+      margin-top: 18px;
+      border-top: 1px solid rgba(7,31,58,0.09);
+      padding-top: 14px;
+      color: var(--bs-muted);
+      font-size: 11.5px;
+      line-height: 1.4;
+    }
+
+    .footer-note p {
+      margin: 0 0 5px;
+    }
+
+    @media (max-width: 900px) {
+      .preview-shell { padding: 18px; }
+      .report-page { min-height: 0; padding: 34px 22px; }
+      .report-page::before { left: 22px; top: 22px; }
+      .brand-row, .hero, .scenario-top, .choice-grid, .fact-grid { grid-template-columns: 1fr; }
+      .page-label { text-align: left; min-width: 0; }
+      .page-progress { width: 100%; }
+      .value-bridge { grid-template-columns: 1fr; }
+      .arrow { transform: rotate(90deg); }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .preview-shell { padding: 0; max-width: none; }
+      .report-page { min-height: 100vh; border: 0; border-radius: 0; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="preview-shell">
+    <section class="report-page">
+      <header class="brand-row">
+        <div>
+          <div class="brand-wordmark">BuySooner</div>
+          <div class="brand-tagline">Buy sooner. Buy smarter.</div>
+        </div>
+        <div class="page-label">
+          Page 2 — The Cost of Waiting
+          <div class="page-progress"><span></span></div>
+        </div>
+      </header>
+
+      <section class="hero">
+        <div>
+          <h1>The Cost of Waiting</h1>
+          <p class="hero-subtitle">The great Australian dream has become a maths problem. Property values may grow faster than you can save.</p>
+          <p class="hero-personal">For <strong id="customerNameA">Sarah</strong>, waiting to buy in <strong id="targetAreaA">St Leonards</strong> could mean chasing a moving target while continuing to pay rent.</p>
+        </div>
+        <div class="hero-image-card" aria-label="Waiting, time and home ownership visual"></div>
+      </section>
+
+      <section class="facts-section">
+        <h2>The facts behind the challenge</h2>
+        <div class="fact-grid">
+          <article class="fact-card">
+            <div class="fact-icon">↗</div>
+            <h3>Home values surged</h3>
+            <div class="fact-number">560%</div>
+            <p>$210k → $1.18m<br />Average capital-city house value since 2000.</p>
+          </article>
+          <article class="fact-card">
+            <div class="fact-icon">⌂</div>
+            <h3>Homes are less affordable</h3>
+            <div class="fact-number">15%</div>
+            <p>Share of homes a typical household can afford.</p>
+          </article>
+          <article class="fact-card">
+            <div class="fact-icon">▣</div>
+            <h3>Deposits still take years</h3>
+            <div class="fact-number">5+ years</div>
+            <p>Average time to save a 20% deposit.</p>
+          </article>
+        </div>
+        <p class="sources">Sources: Propertyology 25-year study, PropTrack Housing Affordability Report 2025, REIA affordability reporting, ABC coverage of Domain’s First Home Buyer Report, Domain’s December 2025 House Price Report.</p>
+      </section>
+
+      <section class="scenario-card">
+        <div class="scenario-top">
+          <div class="scenario-copy">
+            <h2>Your home today and tomorrow</h2>
+            <p>The waiting scenario below uses your target property price, target area, current rent and the base market growth assumption used in this Roadmap.</p>
+          </div>
+          <div class="scenario-assumptions">
+            <div class="assumption-pill"><span>Market outlook</span><strong>Base case — <span id="growthRateA">5.0%</span> p.a.</strong></div>
+            <div class="assumption-pill"><span>Timeline</span><strong><span id="waitingYearsA">3</span> years</strong></div>
+          </div>
+        </div>
+
+        <div class="today-tomorrow">
+          <h3>Your home today and tomorrow</h3>
+          <p class="area" id="targetAreaB">St Leonards</p>
+          <div class="value-bridge">
+            <div class="value-box"><span>Today</span><strong id="todayValue">$1.0m</strong></div>
+            <div class="arrow">→</div>
+            <div class="value-box"><span>Future</span><strong id="futureValue">$1.16m</strong></div>
+          </div>
+          <p class="move-line">The goalposts move by <strong id="goalpostMovement">$157,625</strong>.</p>
+        </div>
+
+        <div class="waiting-tax">
+          <h2>The Waiting Tax is</h2>
+          <strong id="waitingTax">$283,625</strong>
+          <p>The goalposts move while you wait. The same home gets more expensive, while rent keeps draining cash that could be building your own equity.</p>
+        </div>
+
+        <div class="rent-drain" id="rentDrainBox">
+          <h3>The Rent Drain</h3>
+          <p>At <span id="rentMonthlyText">$3,500/month</span>, <span id="rentYearsText">3 years</span> of renting costs <span id="rentDrainTextInline">$126,000</span>.</p>
+          <strong id="rentDrainAmount">$126,000</strong>
+        </div>
+
+        <section class="choice-card">
+          <h2>The choice is yours</h2>
+          <div class="choice-grid">
+            <article class="choice-option wait">
+              <span>Wait <span id="choiceWaitYears">3</span> years</span>
+              <h3><span id="choiceWaitingTax">$283,625</span> growth and rent drain</h3>
+              <p>While waiting means staying on the treadmill, stuck in the rent trap, and compromising on where you live, you remain stuck in a constant “what if”.</p>
+            </article>
+            <article class="choice-option buy">
+              <span>Buy now</span>
+              <h3>Start building equity</h3>
+              <p>Use BuySooner to bridge the deposit gap and move towards ownership instead of chasing the market.</p>
+            </article>
+          </div>
+          <p class="bottom-line">The balance is simple: keep chasing the market, or use BuySooner to bridge the gap.</p>
+        </section>
+
+        <footer class="footer-note">
+          <p>This is a what-if scenario only. It is not a property valuation or market forecast.</p>
+          <p>Assumptions: base case market outlook, <span id="footerGrowth">5.0%</span> p.a. growth assumption, <span id="footerPropertyValue">$1,000,000</span> target property, <span id="footerRent">$3,500/month</span> rent, <span id="footerWaitingYears">3-year</span> waiting period.</p>
+        </footer>
+      </section>
+    </section>
+  </main>
+
+  <script>
+    const pageTwoData = {
+      customerName: 'Sarah',
+      targetArea: 'St Leonards',
+      targetPropertyPrice: 1000000,
+      currentRentMonthly: 3500,
+      marketGrowthRate: 0.05,
+      waitingYears: 3
+    };
+
+    function money(value) {
+      return new Intl.NumberFormat('en-AU', {
+        style: 'currency',
+        currency: 'AUD',
+        maximumFractionDigits: 0
+      }).format(Number(value || 0));
+    }
+
+    function shortMoney(value) {
+      const n = Number(value || 0);
+      if (n >= 1000000) {
+        const m = n / 1000000;
+        return `$${m.toFixed(m % 1 === 0 ? 0 : 2).replace(/\.00$/, '')}m`;
+      }
+      return money(n);
+    }
+
+    function percent(value, digits = 1) {
+      return `${(Number(value || 0) * 100).toFixed(digits)}%`;
+    }
+
+    function renderPageTwo(data) {
+      const targetPrice = Number(data.targetPropertyPrice || 0);
+      const rentMonthly = Number(data.currentRentMonthly || 0);
+      const growth = Number(data.marketGrowthRate || 0.05);
+      const years = Number(data.waitingYears || 3);
+
+      const futureValue = Math.round(targetPrice * Math.pow(1 + growth, years));
+      const priceMovement = Math.max(0, futureValue - targetPrice);
+      const rentDrain = Math.max(0, Math.round(rentMonthly * 12 * years));
+      const waitingTax = priceMovement + rentDrain;
+
+      document.getElementById('customerNameA').textContent = data.customerName || 'Customer';
+      document.getElementById('targetAreaA').textContent = data.targetArea || 'your target area';
+      document.getElementById('targetAreaB').textContent = data.targetArea || 'your target area';
+      document.getElementById('growthRateA').textContent = percent(growth);
+      document.getElementById('waitingYearsA').textContent = years;
+
+      document.getElementById('todayValue').textContent = shortMoney(targetPrice);
+      document.getElementById('futureValue').textContent = shortMoney(futureValue);
+      document.getElementById('goalpostMovement').textContent = money(priceMovement);
+      document.getElementById('waitingTax').textContent = money(waitingTax);
+
+      if (rentMonthly > 0) {
+        document.getElementById('rentMonthlyText').textContent = `${money(rentMonthly)}/month`;
+        document.getElementById('rentYearsText').textContent = `${years} years`;
+        document.getElementById('rentDrainTextInline').textContent = money(rentDrain);
+        document.getElementById('rentDrainAmount').textContent = money(rentDrain);
+      } else {
+        document.getElementById('rentDrainBox').style.display = 'none';
+      }
+
+      document.getElementById('choiceWaitYears').textContent = years;
+      document.getElementById('choiceWaitingTax').textContent = money(waitingTax);
+      document.getElementById('footerGrowth').textContent = percent(growth);
+      document.getElementById('footerPropertyValue').textContent = money(targetPrice);
+      document.getElementById('footerRent').textContent = rentMonthly > 0 ? `${money(rentMonthly)}/month` : 'rent not provided';
+      document.getElementById('footerWaitingYears').textContent = `${years}-year`;
+    }
+
+    renderPageTwo(pageTwoData);
+  </script>
+</body>
+</html>

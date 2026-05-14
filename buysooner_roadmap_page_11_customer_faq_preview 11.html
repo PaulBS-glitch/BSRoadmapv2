@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BuySooner Customer Roadmap — Page 11 FAQ Preview</title>
+  <style>
+    :root {
+      --navy: #061c3d;
+      --teal: #087c75;
+      --teal-dark: #056a63;
+      --teal-soft: #e8f7f4;
+      --blue-soft: #eef5ff;
+      --gold: #d7a51f;
+      --gold-soft: #fff8e8;
+      --ink: #17243a;
+      --muted: #5f6e7e;
+      --line: rgba(6, 28, 61, 0.12);
+      --shadow: 0 22px 68px rgba(6, 28, 61, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #eef4f5;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .preview-shell {
+      width: 100%;
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 28px;
+    }
+
+    .roadmap-page {
+      width: 100%;
+      max-width: 1180px;
+      min-height: 1120px;
+      position: relative;
+      overflow: hidden;
+      margin: 0 auto;
+      border-radius: 32px;
+      border: 1px solid rgba(6, 28, 61, .10);
+      background:
+        radial-gradient(circle at 82% 6%, rgba(9, 132, 124, .12), transparent 30%),
+        linear-gradient(135deg, #fff 0%, #fff 70%, #eef9f8 100%);
+      box-shadow: var(--shadow);
+      padding: 40px 42px 36px;
+    }
+
+    .top-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 375px;
+      gap: 28px;
+      align-items: start;
+      margin-bottom: 26px;
+    }
+
+    .hero h1 {
+      margin: 0;
+      color: var(--navy);
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(54px, 5.6vw, 78px);
+      line-height: .94;
+      letter-spacing: -.055em;
+    }
+
+    .hero h1 span { color: var(--teal); }
+
+    .accent {
+      width: 92px;
+      height: 4px;
+      margin: 18px 0 18px;
+      border-radius: 999px;
+      background: var(--gold);
+    }
+
+    .hero p {
+      margin: 0;
+      max-width: 720px;
+      color: var(--teal-dark);
+      font-size: 22px;
+      line-height: 1.25;
+      font-weight: 900;
+    }
+
+    .personal-note {
+      margin-top: 14px !important;
+      color: var(--navy) !important;
+      font-size: 16px !important;
+      line-height: 1.42 !important;
+      font-weight: 700 !important;
+    }
+
+    .promise-card {
+      display: grid;
+      grid-template-columns: 96px minmax(0, 1fr);
+      gap: 18px;
+      align-items: center;
+      border-radius: 24px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.88);
+      box-shadow: 0 14px 36px rgba(6,28,61,.07);
+      padding: 20px;
+    }
+
+    .shield {
+      width: 84px;
+      height: 104px;
+      display: grid;
+      place-items: center;
+      color: var(--teal);
+      font-size: 64px;
+      font-weight: 900;
+    }
+
+    .promise-card h2 {
+      margin: 0 0 10px;
+      color: var(--teal-dark);
+      font-size: 20px;
+      line-height: 1.1;
+      font-weight: 900;
+    }
+
+    .promise-list {
+      display: grid;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .promise-list li {
+      display: grid;
+      grid-template-columns: 18px minmax(0, 1fr);
+      gap: 7px;
+      color: var(--navy);
+      font-size: 13px;
+      line-height: 1.25;
+      font-weight: 800;
+    }
+
+    .tick {
+      width: 17px;
+      height: 17px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      background: var(--teal);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.04fr;
+      gap: 22px;
+      align-items: start;
+      margin-bottom: 24px;
+    }
+
+    .faq-panel {
+      border-radius: 26px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.92);
+      overflow: hidden;
+      box-shadow: 0 14px 36px rgba(6,28,61,.06);
+    }
+
+    .panel-head {
+      display: grid;
+      grid-template-columns: 60px minmax(0, 1fr);
+      gap: 14px;
+      align-items: center;
+      min-height: 78px;
+      padding: 16px 20px;
+      background: linear-gradient(135deg, #f5fbfa, #ffffff);
+      border-bottom: 1px solid rgba(6,28,61,.08);
+    }
+
+    .panel-icon {
+      width: 50px;
+      height: 50px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      background: var(--teal);
+      color: #fff;
+      font-size: 27px;
+      font-weight: 900;
+    }
+
+    .panel-head h2 {
+      margin: 0;
+      color: var(--teal-dark);
+      font-size: 27px;
+      line-height: 1.05;
+      font-weight: 900;
+    }
+
+    .faq-list {
+      display: grid;
+    }
+
+    .faq-item {
+      display: grid;
+      grid-template-columns: 58px minmax(0, 1fr);
+      gap: 16px;
+      align-items: start;
+      padding: 17px 20px;
+      border-bottom: 1px solid rgba(6,28,61,.08);
+      background: #fff;
+    }
+
+    .faq-item:last-child { border-bottom: 0; }
+
+    .faq-icon {
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      background: var(--teal-soft);
+      color: var(--teal);
+      font-size: 23px;
+      font-weight: 900;
+      margin-top: 2px;
+    }
+
+    .right .faq-icon {
+      background: #edf3fb;
+      color: var(--navy);
+    }
+
+    .faq-copy h3 {
+      margin: 0 0 5px;
+      color: var(--navy);
+      font-size: 16px;
+      line-height: 1.16;
+      font-weight: 900;
+    }
+
+    .faq-copy p {
+      margin: 0;
+      color: var(--ink);
+      font-size: 13.5px;
+      line-height: 1.36;
+    }
+
+    .faq-copy strong {
+      color: var(--teal-dark);
+      font-weight: 900;
+    }
+
+    .mini-note {
+      display: inline-block;
+      margin-top: 7px;
+      border-radius: 999px;
+      padding: 6px 9px;
+      background: rgba(9,132,124,.08);
+      color: var(--teal-dark);
+      font-size: 11px;
+      line-height: 1;
+      font-weight: 900;
+    }
+
+    .bottom-strip {
+      display: grid;
+      grid-template-columns: 92px minmax(0, 1fr) 230px;
+      gap: 22px;
+      align-items: center;
+      min-height: 124px;
+      border-radius: 26px;
+      background: linear-gradient(135deg, var(--teal-dark), var(--navy));
+      color: #fff;
+      padding: 22px 28px;
+      box-shadow: 0 18px 42px rgba(6,28,61,.20);
+    }
+
+    .home-icon {
+      width: 74px;
+      height: 74px;
+      display: grid;
+      place-items: center;
+      border-radius: 22px;
+      background: rgba(255,255,255,.12);
+      color: #fff;
+      font-size: 44px;
+      font-weight: 900;
+    }
+
+    .bottom-copy h2 {
+      margin: 0 0 6px;
+      color: #fff;
+      font-size: 24px;
+      line-height: 1.1;
+      font-weight: 900;
+    }
+
+    .bottom-copy p {
+      margin: 0;
+      color: rgba(255,255,255,.85);
+      font-size: 16px;
+      line-height: 1.35;
+      font-weight: 700;
+    }
+
+    .bottom-copy span { color: #68d3c7; font-weight: 900; }
+
+    .house-art {
+      width: 216px;
+      height: 92px;
+      display: grid;
+      place-items: center;
+      margin-left: auto;
+      border-radius: 24px;
+      background: rgba(255,255,255,.10);
+      color: #fff;
+      font-size: 58px;
+      font-weight: 900;
+    }
+
+    .footer-note {
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 11.5px;
+      line-height: 1.4;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      border-top: 1px solid rgba(6,28,61,.08);
+      padding-top: 13px;
+    }
+
+    @media (max-width: 1020px) {
+      .preview-shell { padding: 18px; }
+      .roadmap-page { padding: 30px 22px; min-height: 0; }
+      .top-grid, .faq-grid, .bottom-strip { grid-template-columns: 1fr; }
+      .promise-card { grid-template-columns: 72px 1fr; }
+      .shield { width: 64px; height: 80px; font-size: 50px; }
+      .house-art { margin-left: 0; }
+      .footer-note { flex-direction: column; }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .preview-shell { padding: 0; max-width: none; }
+      .roadmap-page { min-height: 100vh; border: 0; border-radius: 0; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="preview-shell">
+    <section class="roadmap-page">
+      <section class="top-grid">
+        <div class="hero">
+          <h1>BuySooner —<br><span>Customer FAQ</span></h1>
+          <div class="accent"></div>
+          <p>Clear answers before you start.</p>
+          <p class="personal-note"><strong id="customerNameA">Sarah</strong>, these questions are tailored to your <strong id="targetAreaA">St Leonards</strong> Roadmap and explain the practical points before you move forward.</p>
+        </div>
+
+        <aside class="promise-card">
+          <div class="shield">◇</div>
+          <div>
+            <h2>Our promise</h2>
+            <ul class="promise-list">
+              <li><span class="tick">✓</span><span><strong>$0</strong> monthly repayments to BuySooner.</span></li>
+              <li><span class="tick">✓</span><span>No interest or compounding BuySooner balance.</span></li>
+              <li><span class="tick">✓</span><span>Clear terms from Day 1.</span></li>
+              <li><span class="tick">✓</span><span>BuySooner is paid at exit.</span></li>
+            </ul>
+          </div>
+        </aside>
+      </section>
+
+      <section class="faq-grid">
+        <article class="faq-panel left">
+          <div class="panel-head">
+            <div class="panel-icon">$</div>
+            <h2>Money & Costs</h2>
+          </div>
+
+          <div class="faq-list">
+            <div class="faq-item">
+              <div class="faq-icon">▣</div>
+              <div class="faq-copy">
+                <h3>Do I pay BuySooner each month?</h3>
+                <p>No. You keep paying your normal mortgage repayments to the bank.</p>
+                <span class="mini-note">In your Roadmap: $0/month to BuySooner</span>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-icon">%</div>
+              <div class="faq-copy">
+                <h3>Does BuySooner charge interest?</h3>
+                <p>No. There is no interest and no compounding BuySooner balance.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-icon">⌂</div>
+              <div class="faq-copy">
+                <h3>How much can BuySooner contribute?</h3>
+                <p>Usually around 10% of the purchase price, subject to assessment and approval.</p>
+                <span class="mini-note">For you: <span id="boostInlineA">$100,000</span></span>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-icon">👥</div>
+              <div class="faq-copy">
+                <h3>How much do I need to contribute?</h3>
+                <p>The standard position is 10% from verified savings or other approved sources.</p>
+                <span class="mini-note">For you: <span id="contributionInlineA">$100,000</span></span>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-icon">LMI</div>
+              <div class="faq-copy">
+                <h3>Could BuySooner help me avoid LMI?</h3>
+                <p>Potentially, depending on lender approval, valuation, loan structure and mortgage insurer assessment.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-icon">≡</div>
+              <div class="faq-copy">
+                <h3>What costs do I still pay?</h3>
+                <p>Normal buyer costs: stamp duty, conveyancing, inspections, lender costs, rates, strata and insurance.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="faq-panel right">
+          <div class="panel-head">
+            <div class="panel-icon">↗</div>
+            <h2>Exit & Life Changes</h2>
+          </div>
+
+          <div class="faq-list">
+            <div class="faq-item">
+              <div class="faq-icon">$</div>
+              <div class="faq-copy">
+                <h3>How does BuySooner get paid?</h3>
+                <p>At refinance, sale or buyout. BuySooner receives the original bridge plus the agreed exit amount.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-icon">⌂</div>
+              <div class="faq-copy">
+                <h3>Who sets the property value?</h3>
+                <p>The value is set through the agreed valuation or sale process under the BuySooner terms.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-icon">▣</div>
+              <div class="faq-copy">
+                <h3>What if I am not ready after 3 to 5 years?</h3>
+                <p>The pathway is reviewed. BuySooner is designed to be temporary, but Year 3 is a checkpoint, not a hard deadline.</p>
+                <span class="mini-note">Your Roadmap window: Year 3 to Year 5</span>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-icon">⇄</div>
+              <div class="faq-copy">
+                <h3>Can I buy BuySooner out?</h3>
+                <p>Yes. You can buy out BuySooner through refinance, sale or another agreed pathway.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-icon">↓</div>
+              <div class="faq-copy">
+                <h3>What if the property value goes down?</h3>
+                <p>The Roadmap is reviewed against the BuySooner terms. Property growth, refinance and exit outcomes are not guaranteed.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-icon">A</div>
+              <div class="faq-copy">
+                <h3>What does <span id="brokerNameA">Alex</span> do?</h3>
+                <p><span id="brokerNameB">Alex</span> can help review lender options, serviceability, valuation outcomes and refinance readiness.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-icon">!</div>
+              <div class="faq-copy">
+                <h3>Is this Roadmap an approval?</h3>
+                <p>No. It is an indicative illustration only. Final approval depends on BuySooner assessment, lender approval, valuation, legal documents and your circumstances.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="bottom-strip">
+        <div class="home-icon">⌂</div>
+        <div class="bottom-copy">
+          <h2><span id="customerNameB">Sarah</span>, you own the home from Day 1.</h2>
+          <p>BuySooner helps bridge the gap and is paid out at exit.</p>
+        </div>
+        <div class="house-art">⌂</div>
+      </section>
+
+      <footer class="footer-note">
+        <span><strong>FAQ summary only.</strong> Final rights, obligations, eligibility and exit mechanics are governed by the BuySooner terms and legal documentation.</span>
+        <span>This Roadmap is indicative and is not an approval, valuation or financial advice.</span>
+      </footer>
+    </section>
+  </main>
+
+  <script>
+    const pageElevenData = {
+      customerName: 'Sarah',
+      targetArea: 'St Leonards',
+      customerContribution: 100000,
+      buySoonerBoost: 100000,
+      brokerName: 'Alex'
+    };
+
+    function money(value) {
+      return new Intl.NumberFormat('en-AU', {
+        style: 'currency',
+        currency: 'AUD',
+        maximumFractionDigits: 0
+      }).format(Number(value || 0));
+    }
+
+    function renderPageEleven(data) {
+      const firstName = (data.customerName || 'Customer').split(' ')[0];
+      const area = data.targetArea || 'your target area';
+      const broker = data.brokerName || 'your broker';
+
+      document.getElementById('customerNameA').textContent = firstName;
+      document.getElementById('customerNameB').textContent = firstName;
+      document.getElementById('targetAreaA').textContent = area;
+      document.getElementById('boostInlineA').textContent = money(data.buySoonerBoost || 0);
+      document.getElementById('contributionInlineA').textContent = money(data.customerContribution || 0);
+      document.getElementById('brokerNameA').textContent = broker;
+      document.getElementById('brokerNameB').textContent = broker;
+    }
+
+    renderPageEleven(pageElevenData);
+  </script>
+</body>
+</html>
